@@ -1,0 +1,436 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #141414;
+    color: #fff;
+    font-family: 'Outfit', 'Segoe UI', Arial, sans-serif;
+}
+
+
+
+
+
+
+@keyframes glowNetflix2 { 
+    0% { 
+        opacity: 0; 
+        transform: scale(0.8); 
+    } 
+
+    50% { 
+        opacity: 0.3; transform: scale(1); 
+    } 
+
+    100% { opacity: 0;
+         transform: scale(0.8);
+
+     }
+ }
+
+ 
+/* CENTRALIZA */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 5rem 1.5rem 3rem;
+}
+
+.intro-label {
+    margin-bottom: 0.9rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #8db9ff;
+}
+
+/* TÃTULO */
+h1 {
+    font-size: 3.2rem;
+    font-weight: 400;
+    margin-bottom: 3.5rem;
+}
+
+/* LISTA */
+ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+/* PERFIL */
+.profile {
+    text-decoration: none;
+    text-align: center;
+    color: #808080;
+    transition: opacity 0.3s;
+}
+
+/* IMAGEM */
+.profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+    border: 2px solid rgba(141, 185, 255, 0.18);
+}
+
+
+/* NOME */
+figcaption {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+/* HOVER ESTILO NETFLIX */
+.profile:hover img {
+    transform: translateY(-8px) scale(1.06);
+    border: 2px solid #8db9ff;
+    box-shadow: 0 18px 40px rgba(8,0,40,0.45);
+}
+
+.profile:hover figcaption {
+    color: #fff;
+}
+
+/* ESCURECE OS OUTROS */
+ul:hover .profile {
+    opacity: 0.3;
+}
+
+ul:hover .profile:hover {
+    opacity: 1;
+}
+
+/* BOTÃƒO GERENCIAR */
+.botao-gerenciar {
+    margin-top: 5rem;
+    padding: 0.9rem 2.5rem;
+    border: 1px solid rgba(141, 185, 255, 0.28);
+    background: rgba(141, 185, 255, 0.08);
+    color: #d9e7ff;
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 4rem auto 0 auto;
+    border-radius: 999px;
+}
+
+.botao-gerenciar:hover {
+    color: #081428;
+    border-color: #8db9ff;
+    background: #8db9ff;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    ul {
+        gap: 2rem;
+    }
+
+    .profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        min-height: auto;
+        padding: 6.5rem 1.25rem 2.5rem;
+        justify-content: flex-start;
+    }
+
+    .netflix-title {
+        top: 0.9rem;
+        left: 1rem;
+        font-size: 1.5rem;
+    }
+
+    .theme-container {
+        top: 0.9rem;
+        right: 1rem;
+        gap: 0.5rem;
+        transform: scale(0.84);
+        transform-origin: top right;
+    }
+
+    #theme-text {
+        font-size: 0.82rem;
+        white-space: nowrap;
+    }
+
+    ul {
+        width: min(100%, 320px);
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        justify-content: center;
+        gap: 1.75rem 1.25rem;
+    }
+
+    li {
+        width: 100%;
+    }
+
+    .profile {
+        display: block;
+        width: 100%;
+    }
+
+    .profile img {
+        width: 100%;
+        max-width: 126px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        margin: 0 auto;
+        border-radius: 6px;
+    }
+
+    figcaption {
+        margin-top: 0.8rem;
+        font-size: 1.05rem;
+    }
+
+    h1 {
+        font-size: clamp(2.1rem, 8.8vw, 2.8rem);
+        line-height: 1.12;
+        margin-bottom: 2rem;
+        text-align: center;
+        letter-spacing: 0;
+        max-width: none;
+    }
+
+    h1 span {
+        display: block;
+    }
+
+    h1 span + span {
+        margin-left: 0;
+    }
+
+    .botao-gerenciar {
+        margin-top: 3rem;
+        width: min(100%, 320px);
+        padding: 0.85rem 1.2rem;
+        font-size: 0.95rem;
+        letter-spacing: 0.08em;
+    }
+
+    .gerenciar {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/* LIGHT MODE */
+body.light-mode {
+    background: linear-gradient(to bottom, #e8eef7 0%, #f5f5f5 55%, #f5f5f5 100%);
+    color: #222;
+}
+
+.light-mode .profile {
+    color: #555;
+}
+
+.light-mode .intro-label {
+    color: #1d5fd3;
+}
+
+.light-mode .profile:hover figcaption {
+    color: #000;
+}
+
+/* ðŸ‘‡ AQUI EMBAIXO (NOVO CÃ“DIGO) */
+.theme-container {
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.toggle {
+    width: 50px;
+    height: 28px;
+    background: #555;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: #fff;
+    border-radius: 50%;
+    top: 3px;
+    left: 4px;
+    transition: transform 0.3s;
+}
+body.light-mode .toggle::before {
+    transform: translateX(24px); /* bolinha vai pra direita */
+}
+/* Dark mode com degradÃª no topo */
+body {
+    background:
+        radial-gradient(circle at 50% 0%, rgba(47, 125, 255, 0.16), transparent 24%),
+        linear-gradient(to bottom, #34404f 0%, #141414 42%, #141414 100%);
+    color: #fff;
+}
+
+/* AnimaÃ§Ã£o do bolinho vermelho no meio superior */
+
+/* Keyframes da animaÃ§Ã£o */
+@keyframes glowNetflix {
+    0% { opacity: 0; transform: translateX(-50%) scale(0.8); }
+    50% { opacity: 1; transform: translateX(-50%) scale(1); }
+    100% { opacity: 0; transform: translateX(-50%) scale(0.8); }
+}
+
+/* Switch toggle conforme o tema */
+.toggle {
+    background-color: #0a4fb3; /* azul por padrÃ£o */
+    transition: background-color 0.3s;
+}
+
+body.light-mode .toggle {
+    background-color: #5aa9ff; /* azul claro no modo claro */
+}
+
+/* Bolinha */
+.toggle::before {
+    background-color: #fff;
+    transition: transform 0.3s;
+}
+
+body.light-mode .toggle::before {
+    transform: translateX(24px); /* bolinha vai pra direita */
+}
+/* Bolinha */
+.toggle::before {
+    background-color: #fff; /* bolinha branca no escuro */
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+body.light-mode .toggle::before {
+    transform: translateX(24px); /* bolinha vai pra direita */
+    background-color: #000;      /* bolinha preta no claro */
+}
+
+
+/*AnimaÃ§Ã£o do quem esta assistindo*/
+h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: #eef4ff;
+    margin-bottom: 3.5rem;
+    letter-spacing: 0.02em;
+    text-shadow: 0 8px 24px rgba(0,0,0,0.42);
+
+    opacity: 0;
+    animation: fadeTitle 1s ease forwards;
+}
+
+h1 span + span {
+    margin-left: 0.28em;
+}
+
+@keyframes fadeTitle {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+.netflix-title {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    z-index: 10;
+    display: flex;
+    align-items: flex-end;
+    gap: 0;
+    font-family: 'Bebas Neue', 'Segoe UI', Arial, sans-serif;
+    font-size: 2.05rem;
+    line-height: 0.88;
+    letter-spacing: -0.03em;
+    color: #2f7dff;
+    text-transform: none;
+    text-shadow: 0 0 20px rgba(47, 125, 255, 0.22);
+}
+
+.netflix-title span {
+    display: inline-block;
+    transform-origin: center bottom;
+}
+
+.netflix-title .logo-l,
+.netflix-title .logo-u,
+.netflix-title .logo-r,
+.netflix-title .logo-a,
+.netflix-title .logo-f,
+.netflix-title .logo-l2,
+.netflix-title .logo-i,
+.netflix-title .logo-x {
+    font-size: 1em;
+}
+
+/* efeito ondulado leve */
+.netflix-title .logo-l { transform: translateY(2px) scaleY(1.08) skewY(-6deg); }
+.netflix-title .logo-u { transform: translateY(1px) scaleY(1.05); }
+.netflix-title .logo-r { transform: translateY(0) scaleY(1.02); }
+.netflix-title .logo-a { transform: translateY(-1px) scaleY(1.03) skewY(2deg); }
+.netflix-title .logo-f { transform: translateY(0) scaleY(1.05); }
+.netflix-title .logo-l2 { transform: translateY(1px) scaleY(1.08); }
+.netflix-title .logo-i { transform: translateY(2px) scaleY(1.04); }
+.netflix-title .logo-x { transform: translateY(2px) scaleY(1.08) skewY(6deg); }
+
+/* glow vermelho atrÃ¡s do logo */
+.netflix-title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 260px;   /* ðŸ‘ˆ aumenta aqui */
+    height: 90px;   /* ðŸ‘ˆ aumenta aqui */
+
+    background: radial-gradient(circle, rgba(47, 125, 255, 0.28) 0%, transparent 70%);
+    
+    filter: blur(25px);
+    z-index: -1;
+}
+
+body.light-mode h1 {
+    color: #222;
+}
+body.light-mode h1 {
+    color: #222; /* preto mais suave */
+    text-shadow: none; /* ðŸ‘ˆ remove a sombra */
+}
