@@ -44,7 +44,7 @@ Efeitos de hover e animações visuais.
 ## 🌐 Acesse o projeto
 **🔗 Deploy (Netlify):**
 
-https://ymontemor.github.io/Netflix_Alura2026/
+https://vermillion-gaufre-46b8d1.netlify.app/
 
 **📁 Repositório:**
 
