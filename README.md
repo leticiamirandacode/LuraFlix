@@ -1,6 +1,6 @@
 # 🎬 LuraFlix
 
-#  Netflix Clone - Imersão Front-End Alura 2026
+##  Netflix Clone - Imersão Front-End Alura 2026
 Projeto desenvolvido durante a Imersão Front-End da Alura, com foco na recriação da interface da Netflix utilizando tecnologias web.
 
 ## 🚀 Sobre o projeto 
@@ -49,6 +49,10 @@ https://vermillion-gaufre-46b8d1.netlify.app/
 **📁 Repositório:**
 
 https://github.com/leticiamirandacode/LuraFlix
+
+
+## 💡 Considerações finais
+Este projeto representa não apenas a aplicação de conceitos técnicos, mas também minha evolução prática no desenvolvimento front-end, buscando sempre aproximar minhas soluções de cenários reais.
 
 ## 👨‍💻 Autor
 Desenvolvido por Letícia Miranda
